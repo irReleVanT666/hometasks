@@ -68,6 +68,16 @@ print(dayVar, monthVar, yearVar)
 # Подсказка:
 # для получения случайного числа используйте функцию randint() модуля random
 
+import random
+print('Enter number of elements:')
+n = int(input())
+myList = []
+i = 0
+while i < n:
+    x=random.randint(-101, 101)
+    myList.append(x)
+    i +=1
+print(myList)
 
 # Задача-4: Дан список, заполненный произвольными целыми числами.
 # Получите новый список, элементами которого будут: 
