@@ -85,3 +85,26 @@ print(myList)
 # например, lst = [1, 2, 4, 5, 6, 2, 5, 2], нужно получить lst2 = [1, 2, 4, 5, 6]
 # б) элементы исходного списка, которые не имеют повторений:
 # например, lst = [1 , 2, 4, 5, 6, 2, 5, 2], нужно получить lst2 = [1, 4, 6]
+
+a) 
+s = input('Enter numbers with spaces between: ')
+a = s.split()
+print (list(set(a)))
+
+b) 
+x = [1, 2, 4, 5, 6, 2, 5, 2]
+v = []
+
+for i in range(len(x)):
+    varState = True
+    for j in range(len(x)):
+        if x[i] == x[j] and i != j :
+            varState = False
+            break
+    if varState == True:
+        v.append(x[i])
+print(v)
+
+
+
+
