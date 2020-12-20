@@ -31,10 +31,12 @@ varAnsw = input()
 i = 0
 if varAnsw == 'ne4etnie?':
 	for i in range(1,20,2):
-		print (i, end=',')
+		print(i, end=',')
 if varAnsw == '4etnie':
 	for i in range(0,20,2):
-		print (i, end=',')
+		print(i, end=',')
+else:
+	print('Can't get what do you mean...')		
 	
 
 
