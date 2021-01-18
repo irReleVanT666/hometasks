@@ -38,16 +38,16 @@ except Exception as ex:
 # 2.1
 import os
 
-dir_name = 'testdir'
-for i in range(1,11):
+dir_name = 'dir'
+for i in range(1,10):
     c = dir_name + str(i)
     os.mkdir(c, mode=0o777, dir_fd=None)
     
     
 #2.2
 import os
-dir_name = 'testdir'
-for i in range(1,11):
+dir_name = 'dir'
+for i in range(1,10):
     cur_os = os.name
     if cur_os == 'posix':
         curdir = os.getcwd() + '/' + dir_name + str(i)
