@@ -1,0 +1,25 @@
+class Tag:
+    def __init__(self, tag):
+        self.tag = tag
+
+class TagCreater:
+    def creater(self, tag):
+        creater = get_serializer(tag)
+        return creater(tag)
+    
+def get_serializer(tag):
+    if tag == 'image':
+        return get_tag_img
+    else:
+        return get_tag_p
+
+def get_tag_p(tag):
+    return f"<{tag}></{tag}>"
+
+def get_tag_img(self):
+    return f"<img>"
+
+elements = ['a', 'image', 'input']
+serializer = TagCreater()
+for el in elements:
+    print(serializer.creater(el))
