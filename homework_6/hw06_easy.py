@@ -3,23 +3,7 @@
 # используя конструкцию try добавьте в код обработку соответствующих исключений.
 # Пример.
 # Исходная программа:
-def avg(a, b):
-    """Вернуть среднее геометрическое чисел 'a' и 'b'.
 
-    Параметры:
-        - a, b (int или float).
-
-    Результат:
-        - float.
-    """
-    return (a * b) ** 0.5
-
-
-a = float(input("a = "))
-b = float(input("b = "))
-c = avg(a, b)
-print("Среднее геометрическое = {:.2f}".format(c))
-==========================================================================================================
 def avg(a, b):
     """Вернуть среднее геометрическое чисел 'a' и 'b'.
 
@@ -40,7 +24,7 @@ except ValueError as valerr:
 except Exception as ex:
     print('Произошло неведомое {0}'.format(ex))
 
-os.mkdir(path, mode=0o777, *, dir_fd=None)
+
 
 
 
@@ -51,17 +35,26 @@ os.mkdir(path, mode=0o777, *, dir_fd=None)
 # Напишите скрипт, создающий директории dir_1 - dir_9 в папке,
 # из которой запущен данный скрипт.
 # И второй скрипт, удаляющий эти папки.
-
+# 2.1
 import os
 
-dir_name = 'testdir'
-for i in range(1,11):
+dir_name = 'dir'
+for i in range(1,10):
     c = dir_name + str(i)
     os.mkdir(c, mode=0o777, dir_fd=None)
-
-for i in range(1,11):
-    curdir = os.getcwd() + '\\' + dir_name + str(i)
-    os.removedirs(curdir)
+    
+    
+#2.2
+import os
+dir_name = 'dir'
+for i in range(1,10):
+    cur_os = os.name
+    if cur_os == 'posix':
+        curdir = os.getcwd() + '/' + dir_name + str(i)
+        os.removedirs(curdir)
+    elif cur_os = 'nt':
+        curdir = os.getcwd() + '\\' + dir_name + str(i)
+        os.removedirs(curdir)
 
 
 # Задача-3:
